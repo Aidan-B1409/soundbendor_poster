@@ -1,0 +1,129 @@
+% Gemini theme
+% https://github.com/anishathalye/gemini
+
+% Color Scheme - OSU
+% Extracted from https://communications.oregonstate.edu/brand-guide/visual-identity/colors
+
+
+
+
+% ====================
+% Macros
+% ====================
+\newcommand*{\headercolor}[1]{
+    \def\param{#1}%
+    \def\orange{Orange}%
+    \def\black{Black}%
+    \def\luminance{Luminance}%
+    \ifx\param\orange
+        % Orange Header
+        \setbeamercolor{structure}{fg=black}
+        
+        % Headline
+        \setbeamercolor{headline}{fg=white,bg=beaver}
+        \setbeamercolor{headline rule}{bg=black}
+
+        % use this to include logos on the left and/or right side of the header:
+        \logoright{\includegraphics[width=20cm]{images/soundbendor_logo_monochrome.png}}
+        \logoleft{\includegraphics[height=7cm]{images/OSU_horizontal_1C_W.png}}
+    \else
+        \ifx\param\luminance
+            % Orange Header
+            \setbeamercolor{structure}{fg=luminance}
+            
+            % Headline
+            \setbeamercolor{headline}{fg=white,bg=luminance}
+            \setbeamercolor{headline rule}{bg=black}
+    
+            % use this to include logos on the left and/or right side of the header:
+            \logoright{\includegraphics[width=20cm]{images/soundbendor_logo_lightBG.png}}
+            \logoleft{\includegraphics[height=7cm]{images/OSU_horizontal_2C_O_over_B.png}}
+        \else
+            % Black Header
+            \setbeamercolor{structure}{fg=beaver}
+            
+            % Headline
+            \setbeamercolor{headline}{fg=white,bg=black}
+            \setbeamercolor{headline rule}{bg=beaver}
+            % use this to include logos on the left and/or right side of the header:
+            \logoright{\includegraphics[width=20cm]{images/soundbendor_logo_darkBG.png}}
+            \logoleft{\includegraphics[height=7cm]{images/OSU_horizontal_2C_O_over_W.png}}
+        \fi
+    \fi
+}
+
+% ====================
+% Definitions
+% ====================
+
+\definecolor{red}{RGB}{237, 28, 36}
+\definecolor{brown}{RGB}{78, 54, 41}
+\definecolor{gold}{RGB}{255, 199, 44}
+\definecolor{gray}{RGB}{225, 228, 232}
+
+
+\definecolor{beaver}{HTML}{D73F09}
+%   paddletail black = 000000
+%   bucktooth white = FFFFFF
+% Secondary - normal
+\definecolor{pinestand}{HTML}{4A773C}
+\definecolor{hightide}{HTML}{00859B}
+\definecolor{luminance}{HTML}{FFB500}
+\definecolor{stratosphere}{HTML}{006A8E}
+% Secondary - light
+\definecolor{reindeermoss}{HTML}{C4D6A4}
+\definecolor{seafoam}{HTML}{B8DDE1}
+\definecolor{candela}{HTML}{FDD26E}
+\definecolor{moondust}{HTML}{C6DAE7}
+% Secondary - dark
+\definecolor{hopbine}{HTML}{AA9D2E}
+\definecolor{roguewave}{HTML}{0D5257}
+\definecolor{solarflare}{HTML}{D3832B}
+\definecolor{starcanvas}{HTML}{003B5C}
+% Secondary - grays
+\definecolor{till}{HTML}{B7A99A}
+\definecolor{coastline}{HTML}{A7ACA2}
+\definecolor{highdesert}{HTML}{7A6855}
+\definecolor{crater}{HTML}{8E9089}
+
+% ====================
+% Theme
+% ====================
+
+% Basic colors
+\setbeamercolor{palette primary}{fg=black,bg=white}
+\setbeamercolor{palette secondary}{fg=black,bg=white}
+\setbeamercolor{palette tertiary}{bg=black,fg=white}
+\setbeamercolor{palette quaternary}{fg=black,bg=white}
+
+% Block
+\setbeamercolor{block title}{fg=red,bg=white}
+\setbeamercolor{block separator}{bg=black}
+\setbeamercolor{block body}{fg=black,bg=white}
+
+% Alert Block
+\setbeamercolor{block alerted title}{fg=red,bg=gray}
+\setbeamercolor{block alerted separator}{bg=black}
+\setbeamercolor{block alerted body}{fg=black,bg=gray}
+
+% Example Block
+\setbeamercolor{block example title}{fg=beaver,bg=gray}
+\setbeamercolor{block example separator}{bg=black}
+\setbeamercolor{block example body}{fg=black,bg=gray}
+
+% Heading
+\setbeamercolor{heading}{fg=beaver}
+
+% Itemize
+\setbeamercolor{item}{fg=red}
+
+% Bibliography
+\setbeamercolor{bibliography item}{fg=black}
+\setbeamercolor{bibliography entry author}{fg=black}
+\setbeamercolor{bibliography entry title}{fg=black}
+\setbeamercolor{bibliography entry location}{fg=black}
+\setbeamercolor{bibliography entry note}{fg=black}
+\setbeamertemplate{bibliography entry article}{}
+\setbeamertemplate{bibliography entry title}{}
+\setbeamertemplate{bibliography entry location}{}
+\setbeamertemplate{bibliography entry note}{}
